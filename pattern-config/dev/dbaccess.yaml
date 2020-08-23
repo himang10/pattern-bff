@@ -1,0 +1,83 @@
+spring:
+  microservice-name: sample-application-property-for-base-msa-framework
+  datasource:
+    dbcp2:
+      initial-size: 20  
+    platform: mariadb
+    url: jdbc:mariadb://169.56.162.104:3306/instructor
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: admin
+    password: qoxSVIJA8q
+
+  h2:
+    console:
+      enabled: false
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+
+---
+spring:
+  datasource:
+    dbcp2:
+      initial-size: 20
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: hs96Fo5zUe
+    platform: mariadb
+    url: jdbc:mariadb://169.56.162.125:3306/dev-platform
+    username: admin
+  h2:
+    console:
+      enabled: false
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  microservice-name: bff-service
+
+---
+spring:
+  datasource:
+    dbcp2:
+      initial-size: 20
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: hs96Fo5zUe
+    platform: mariadb
+    url: jdbc:mariadb://169.56.162.125:3306/dev-platform
+    username: admin
+  h2:
+    console:
+      enabled: false
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  microservice-name: kafka-producer
+
+---
+spring:
+  datasource:
+    dbcp2:
+      initial-size: 20
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: hs96Fo5zUe
+    platform: mariadb
+    url: jdbc:mariadb://169.56.162.125:3306/dev-platform
+    username: admin
+  h2:
+    console:
+      enabled: false
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  microservice-name: kafka-consumer
